@@ -9,7 +9,7 @@ var path = require("path");
 var chalk = require("chalk");
 
 
-var files = glob.sync("**/*.md", {ignore: ["node_modules/**/*.md"]})
+var files = glob.sync("**/*.md", {dot: true, ignore: ["node_modules/**/*.md"]})
 
 var config = JSON.parse(fs.readFileSync(".markdown-link-check.json"));
 config.timeout = '30s'
